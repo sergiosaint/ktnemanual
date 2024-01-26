@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.logo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -15,32 +20,59 @@ body {
     }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.page {
+    margin: 1em auto;
+    padding: 0;
+    border: 1px solid #222; /* Safely using px because exists outside layout of page content */
+    box-shadow: #222 0.0em 0em 0.6em;
+    clear: both;
+    background-color: #FFF;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 51em; /* = 8.5in at 12pt (1em) */
+    min-height: 66em; /* = 11in at 12pt (1em) */
+    max-height: 66em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media print {
+    .page {
+        margin: 0;
+        border: none;
+        box-shadow: none;
+        max-width: none;
+        min-height: initial;
+        width: 51em; /* = 8.5in at 12pt (1em) */
+        height: 66em; /* = 11in at 12pt (1em) */
+        page-break-before: always;
+    }
 }
 
-.App-link {
-  color: #61dafb;
+.page-bg-01 {
+    background-image: url("page-bg-noise-01.png");
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.page-bg-02 {
+    background-image: url("page-bg-noise-02.png");
 }
+
+.page-bg-03 {
+    background-image: url("page-bg-noise-03.png");
+}
+
+.page-bg-04 {
+    background-image: url("page-bg-noise-04.png");
+}
+
+.page-bg-05 {
+    background-image: url("page-bg-noise-05.png");
+}
+
+.page-bg-06 {
+    background-image: url("page-bg-noise-06.png");
+}
+
+.page-bg-07 {
+    background-image: url("page-bg-noise-07.png");
+}
+

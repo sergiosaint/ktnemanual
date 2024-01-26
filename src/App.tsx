@@ -5,8 +5,8 @@ import PasswordModule from './passwordModule/passwordModule';
 
 function App() {
   return (
-    <div className="App">
-          <img src={logo} alt="Keep Talking and Nobody Explodes" />
+      <div className="App page page-bg-01">
+          <img className="logo" src={logo} alt="Keep Talking and Nobody Explodes" />
           <PasswordModule />
     </div>
   );
