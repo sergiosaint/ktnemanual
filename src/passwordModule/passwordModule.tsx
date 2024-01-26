@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import './PasswordModule.css';
 
 function PasswordModule() {
 
-    const allWords = ["about", "after", "again", "below", "could",
-                      "every", "first", "found", "great", "house",
-                      "large", "learn", "never", "other", "place",
-                      "plant", "point", "right", "small", "sound",
-                      "spell", "still", "study", "their", "there",
-                      "these", "thing", "think", "three", "water",
-                      "where", "which", "world", "would", "write"];
+    const allWords = useMemo(() => ["about", "after", "again", "below", "could",
+                                    "every", "first", "found", "great", "house",
+                                    "large", "learn", "never", "other", "place",
+                                    "plant", "point", "right", "small", "sound",
+                                    "spell", "still", "study", "their", "there",
+                                    "these", "thing", "think", "three", "water",
+                                    "where", "which", "world", "would", "write"], []);
 
     const [possibleWords, setPossibleWords] = useState(allWords)
     const [selected1stCharacters, setPossible1stCharacters] = useState<Set<string>>(new Set([]))
@@ -19,7 +19,6 @@ function PasswordModule() {
     const [selected5thCharacters, setPossible5thCharacters] = useState<Set<string>>(new Set([]))
 
     useEffect(() => {
-
         let filteredWords = allWords
         if (selected1stCharacters.size > 0) { filteredWords = filteredWords.filter(word => selected1stCharacters.has(word.charAt(0))) }
         if (selected2ndCharacters.size > 0) { filteredWords = filteredWords.filter(word => selected2ndCharacters.has(word.charAt(1))) }
@@ -27,7 +26,7 @@ function PasswordModule() {
         if (selected4thCharacters.size > 0) { filteredWords = filteredWords.filter(word => selected4thCharacters.has(word.charAt(3))) }
         if (selected5thCharacters.size > 0) { filteredWords = filteredWords.filter(word => selected5thCharacters.has(word.charAt(4))) }
         setPossibleWords(filteredWords)
-    }, [selected1stCharacters, selected2ndCharacters, selected3rdCharacters, selected4thCharacters, selected5thCharacters])
+    }, [selected1stCharacters, selected2ndCharacters, selected3rdCharacters, selected4thCharacters, selected5thCharacters, allWords])
 
     function getAllUniqueFirstCharacters(index: number): Set<string> {
         const firstCharacters = allWords.map((string) => string.charAt(index));
@@ -40,11 +39,9 @@ function PasswordModule() {
     }
 
     function getCharClass(character: string, possibleChars: Set<string>, selectedChars: Set<string> ) {
-        {
-            if (selectedChars.has(character)) { return "characterSelected" }
-            if (possibleChars.has(character)) { return "possibleCharacter" }
-            return ""
-        }
+        if (selectedChars.has(character)) { return "characterSelected" }
+        if (possibleChars.has(character)) { return "possibleCharacter" }
+        return ""
     }
 
     function updatePossible1stCharacters(character: string) {
