@@ -2,9 +2,17 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0;
+    padding: 0;
+    background: url('background.jpg');
+    background-attachment: fixed;
+}
+
+@media print {
+    body {
+        background: none;
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
