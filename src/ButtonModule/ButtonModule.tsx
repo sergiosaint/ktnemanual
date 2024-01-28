@@ -1,4 +1,6 @@
-﻿
+import './ButtonModule.css';
+import ButtonTable from './img/button.png';
+
 function ButtonModule() {
     return (
         <div>
