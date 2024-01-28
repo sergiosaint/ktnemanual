@@ -1,4 +1,3 @@
-import React, { useEffect, useMemo, useState } from 'react';
 import './SimonModule.css';
 import simonImg from './img/simon.png';
 
