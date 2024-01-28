@@ -28,8 +28,8 @@ import NeedyKnobModule from './NeedyKnobModule/NeedyKnobModule';
 
 function App() {
     return (
-        <>
-            <div className="App page page-bg-01">
+        <div className="App">
+            <div className="page page-bg-01">
                 <img className="logo" src={logo} alt="Keep Talking and Nobody Explodes" />
                 <p />
                 <div className="row" id="top">
@@ -68,7 +68,9 @@ function App() {
             <div className="page page-bg-03" id="WireSequenceModule"><WireSequenceModule /></div >
             <div className="page page-bg-04" id="MorseCodeModule"><MorseCodeModule /></div >
             <div className="page page-bg-05" id="NeedyKnobModule"><NeedyKnobModule /></div >
-        </>
+
+            <div className="StickBottom"><a href='#top'>Back to Top</a></div >
+        </div>
     );
 }
 
