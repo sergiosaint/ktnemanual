@@ -91,7 +91,8 @@ function PasswordModule() {
     }
 
   return (
-        <div>
+      <div>
+          <h3>Password</h3>
           <div className="possibleWords">{possibleWords.sort((a, b) => a.localeCompare(b)).map(item => item).join(', ')}</div>
 
           <div className="grid">
