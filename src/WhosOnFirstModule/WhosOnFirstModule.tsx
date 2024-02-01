@@ -5,12 +5,11 @@ function WhosOnFirstModule() {
     return (
         <>
             <div>
-                <h3>Who' s On First? Part 1</h3>
+                <h3>Who' s On First?</h3>
                 <img src={wofImg} width="55%" alt="whosOnFirst" />
             </div>
             <div>
-                <h3>Who's On First? Part 2</h3>
-                <table cellSpacing={0}>
+                <table cellSpacing={0} className='wftable'>
                     <tbody>
                         <tr>
                             <th>BLANK</th>
