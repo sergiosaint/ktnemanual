@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b9faade0-2be7-45d1-ada2-3cf0765bcb00/deploy-status)](https://app.netlify.com/sites/ktanemanual/deploys)
+
 # Improved manual for Keep Talking and Nobody Explodes
 
 This is just an improved manual for the game [Keep Talking and Nobody Explodes](https://keeptalkinggame.com/),
