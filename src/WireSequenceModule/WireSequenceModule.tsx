@@ -10,15 +10,37 @@ function WireSequenceModule() {
     function toggleViewed(colorIndex: number, rowIndex: number): void {
         switch (colorIndex) {
             case 0:
-                viewedRedWires[rowIndex] = !viewedRedWires[rowIndex];
+                let nextRed = viewedRedWires.findIndex((x) => !x);
+                if(nextRed === -1) {nextRed = 9}
+
+                if(nextRed - 1 === rowIndex){
+                    viewedRedWires[rowIndex] = !viewedRedWires[rowIndex];
+                }else{
+                    viewedRedWires[nextRed] = true;
+                }
                 setViewedRedWires([...viewedRedWires]);
                 break;
             case 1:
-                viewedBlueWires[rowIndex] = !viewedBlueWires[rowIndex];
+                let nextBlue = viewedBlueWires.findIndex((x) => !x);
+                if(nextBlue === -1) {nextBlue = 9}
+
+                if(nextBlue - 1 === rowIndex){
+                    viewedBlueWires[rowIndex] = !viewedBlueWires[rowIndex];
+                }else{
+                    viewedBlueWires[nextBlue] = true;
+                }
                 setViewedBlueWires([...viewedBlueWires]);
                 break;
             case 2:
-                viewedBlackWires[rowIndex] = !viewedBlackWires[rowIndex];
+                let nextBlack = viewedBlackWires.findIndex((x) => !x);
+                if(nextBlack === -1) {nextBlack = 9}
+                
+
+                if(nextBlack - 1 === rowIndex){
+                    viewedBlackWires[rowIndex] = !viewedBlackWires[rowIndex];
+                }else{
+                    viewedBlackWires[nextBlack] = true;
+                }
                 setViewedBlackWires([...viewedBlackWires]);
                 break;
             default:
@@ -53,9 +75,9 @@ function WireSequenceModule() {
             <table className="table">
                 <tbody>
                     <tr>
-                        <th colSpan={2}>RED</th>
-                        <th colSpan={2}>BLUE</th>
-                        <th colSpan={2}>BLACK</th>
+                        <th colSpan={2} onClick={() => toggleViewed(0, -2)}>RED</th>
+                        <th colSpan={2} onClick={() => toggleViewed(1, -2)}>BLUE</th>
+                        <th colSpan={2} onClick={() => toggleViewed(2, -2)}>BLACK</th>
                     </tr>
                     <tr>
                         <th className={isViewed(0, 0) ? "viewed" : ""} onClick={() => toggleViewed(0, 0)} >1</th>
