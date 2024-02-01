@@ -1,23 +1,23 @@
-.grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+.keypad-table {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, sans-serif;
+    font-size: 2.2em;
+    border-style: none;
+    text-align: center;
+    border-spacing: 3px;
 }
 
-.characterCount {
-    font-weight: bold;
-    padding-bottom: 10px;
+.keypad-table-column {
+    background-color: #FFF; /*For ensuring photocopy noise doesn't affect symbols*/
+	padding: .1em;
 }
 
-.possibleWords {
-    padding-bottom: 10px;
+.keypad-table-spacer {
+	border-style: none;
+    width: 10px;
 }
 
-.characterSelected {
-    font-weight: bold;
-    color: green;
-}
-
-.possibleCharacter {
-    font-weight: bold;
-    color: blue;
+.keypad-symbol-image {
+	height:1.9em;
 }
