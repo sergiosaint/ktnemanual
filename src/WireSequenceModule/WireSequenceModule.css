@@ -1,23 +1,31 @@
-.grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+.wireSequenceModule {
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
-.characterCount {
-    font-weight: bold;
-    padding-bottom: 10px;
+table, th, td {
+    border: 1px solid black;
+    border-spacing: 0;
 }
 
-.possibleWords {
-    padding-bottom: 10px;
+.table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.characterSelected {
-    font-weight: bold;
-    color: green;
+.viewed {
+    background-color: black;
 }
 
-.possibleCharacter {
-    font-weight: bold;
-    color: blue;
+.reset {
+    margin-left: 10%;
+    margin-top: 50px;
+    text-align: left;
 }
+
+    .reset:hover {
+        color: red;
+        transition: all 0.1s linear;
+        cursor:pointer;
+    }
