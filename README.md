@@ -9,7 +9,7 @@ The manual is hosted at https://ktanemanual.netlify.app/
 
 Currently only has an interactive way to solve the password module.
 
-### I plan to integrate ideas from these other manuals:
+### Ideas to integrate ideas from these other manuals:
 
 https://ktane.fandom.com/wiki/Complicated_Wires
 
@@ -22,5 +22,7 @@ https://imgur.com/Unb6RCv
 http://fizzystack.web.fc2.com/ktane/visual.html
 
 https://imgur.com/hmUteXe
+
+https://turbowarp.org/890821735
 
 
