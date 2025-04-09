@@ -6,7 +6,7 @@ function MemoryModule() {
   const [inputValues, setInputValues] = useState<string[][]>(initialInputs);
 
   const handleInputChange = (rowIndex: number, colIndex: number) => (e: ChangeEvent<HTMLInputElement>) => {
-    const newInputs = inputValues.map(row => [...row]); // clone each row
+    const newInputs = inputValues.map(row => [...row]); // clone each row to avoid mutation
     newInputs[rowIndex][colIndex] = e.target.value;
     setInputValues(newInputs);
   };
@@ -88,11 +88,12 @@ function MemoryModule() {
             {inputValues.map((row, rowIndex) => (
                 <tr key={rowIndex}>
                   {row.map((cellValue, colIndex) => (
-                      <td key={colIndex}>
+                      <td key={colIndex} style={{ textAlign: 'center' }}>
                         <input
                             type="text"
                             value={cellValue}
                             onChange={handleInputChange(rowIndex, colIndex)}
+                            style={{ display: 'block', margin: '0 auto', textAlign: 'center' }}
                         />
                       </td>
                   ))}
